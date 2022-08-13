@@ -23,20 +23,22 @@
     <header class="header">
       <div class="container nav-flex">
         <nav class="header-nav">
-          <a href="./index.html" class="logo link">Web<span class="logo-black">Studio</span></a>
+          <a class="logo link" href="./index.html">Web<span class="logo-black">Studio</span></a>
           <ul class="site-nav list">
             <li class="item">
-              <a href="./index.html" class="header-contact link current">Студія</a>
+              <a class="header-contact link current" href="./index.html">Студія</a>
             </li>
             <li class="item">
-              <a href="./portfolio.html" class="header-contact link">Портфоліо</a>
+              <a class="header-contact link" href="./portfolio.html">Портфоліо</a>
             </li>
-            <li class="item"><a href="" class="header-contact link">Контакти</a></li>
+            <li class="item">
+              <a class="header-contact link" href="">Контакти</a>
+            </li>
           </ul>
         </nav>
         <ul class="auth-nav list">
           <li class="item">
-            <a href="mailto:info@devstudio.com" class="header-contact link">
+            <a class="header-contact link" href="mailto:info@devstudio.com">
               <svg class="contact-icon" width="16" height="12">
                 <use href="./img/icons.svg#icon-envelope"></use>
               </svg>
@@ -44,7 +46,7 @@
             </a>
           </li>
           <li class="item">
-            <a href="tel:+380961111111" class="header-contact link">
+            <a class="header-contact link" href="tel:+380961111111">
               <svg class="contact-icon" width="10" height="16">
                 <use href="./img/icons.svg#icon-smartphone"></use>
               </svg>
@@ -61,7 +63,7 @@
       <section class="section hero-section">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="hero-button">Замовити послугу</button>
+          <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <!-- Преимущества компании -->
@@ -123,12 +125,15 @@
           <ul class="work-list list">
             <li class="work-item">
               <img src="./img/img1.jpg" alt="Співробітник створює програму" width="370" />
+              <p class="work-text">Десктопні додатки</p>
             </li>
             <li class="work-item">
               <img src="./img/img2.jpg" alt="Співробітник тестує програму" width="370" />
+              <p class="work-text">Мобільні додатки</p>
             </li>
             <li class="work-item">
               <img src="./img/img3.jpg" alt="Співробітник вибирає колір" width="370" />
+              <p class="work-text">Дизайнерські рішення</p>
             </li>
           </ul>
         </div>
@@ -561,5 +566,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop in-hedden" data-modal>
+      <div class="modal">
+        <button class="close-button" type="button" data-modal-close>
+          <svg class="modal-icon" width="11" height="11">
+            <use href="./img/icons.svg#icon-vector"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
