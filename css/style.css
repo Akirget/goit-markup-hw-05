@@ -396,7 +396,7 @@ address {
   font-size: 14px;
   line-height: calc(16 / 14);
   text-transform: uppercase;
-  
+
   color: var(--white-color);
   background: rgba(47, 48, 58, 0.8);
 }
@@ -719,6 +719,18 @@ address {
   cursor: pointer;
 }
 
+.portfolio-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.portfolio-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  transform: translateY(0);
+}
+
 .portfolio-link {
   display: block;
 
@@ -735,12 +747,36 @@ address {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-item:nth-child(3n) {
-  margin-right: 0;
+.portfolio-description {
+  position: relative;
+  overflow: hidden;
 }
 
-.portfolio-item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
+.portfolio-overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: calc(28 / 18);
+
+  color: var(--white-color);
 }
 
 .portfolio-border {
@@ -768,3 +804,50 @@ address {
 
 /* МОДАЛЬНОЕ ОКНО */
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  min-height: 581px;
+
+  background-color: var(--white-color);
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
