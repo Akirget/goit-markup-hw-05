@@ -35,7 +35,7 @@
   --footer-color-background: #2f303a;
   --footer-color-mail: rgba(255, 255, 255, 0.6);
   --icon-color: #afb1b8;
-  --anim-slow: var(--anim-slow)
+  --anim-slow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Вся страница */
