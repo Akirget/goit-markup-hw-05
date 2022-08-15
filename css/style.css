@@ -35,6 +35,7 @@
   --footer-color-background: #2f303a;
   --footer-color-mail: rgba(255, 255, 255, 0.6);
   --icon-color: #afb1b8;
+  --anim-slow: var(--anim-slow)
 }
 
 /* Вся страница */
@@ -220,7 +221,7 @@ address {
 
   position: relative;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--anim-slow);
 }
 
 /* .auth-nav .link:hover,
@@ -293,8 +294,8 @@ address {
   letter-spacing: 0.06em;
   cursor: pointer;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--anim-slow),
+    background-color var(--anim-slow);
 }
 
 .hero-button:hover,
@@ -481,7 +482,7 @@ address {
 
   fill: var(--icon-color);
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--anim-slow), background-color var(--anim-slow);
 }
 
 .team-social-link:hover,
@@ -530,7 +531,7 @@ address {
 
   fill: var(--icon-color);
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--anim-slow), border var(--anim-slow);
 }
 
 .client-link:hover,
@@ -577,7 +578,7 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--anim-slow);
 }
 
 .footer-mail:hover,
@@ -633,7 +634,7 @@ address {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--anim-slow);
 }
 
 .footer-social-link:hover,
@@ -685,7 +686,7 @@ address {
   letter-spacing: 0.03em;
   cursor: pointer;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--anim-slow), background-color var(--anim-slow);
 }
 
 .aktiv {
@@ -732,8 +733,8 @@ address {
 .portfolio-link {
   display: block;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--anim-slow);
+  transition: border var(--anim-slow), box-shadow var(--anim-slow);
 }
 
 .portfolio-link:hover,
@@ -758,7 +759,7 @@ address {
   height: 100%;
 
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--anim-slow);
 
   background-color: rgba(33, 150, 243, 0.9);
 }
@@ -808,8 +809,8 @@ address {
   width: 100%;
   height: 100%;
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--anim-slow),
+    visibility var(--anim-slow);
 
   background: rgba(0, 0, 0, 0.2);
 }
