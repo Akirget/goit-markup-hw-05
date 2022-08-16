@@ -686,7 +686,7 @@ address {
   letter-spacing: 0.03em;
   cursor: pointer;
 
-  transition: color var(--anim-slow), background-color var(--anim-slow);
+  transition: color var(--anim-slow), background-color var(--anim-slow), box-shadow var(--anim-slow);
 }
 
 .aktiv {
